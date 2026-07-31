@@ -149,7 +149,7 @@
             buttons: [{ text: "🔄 Back to Main", action: "main" }]
         },
         colors: {
-            text: "<b>Colors:</b> Primary colors are Red, Yellow, and Blue. Mixing them creates every other color! Secondary coors in art are orange, green and purple! Orange is made of red and yellow, green is made of yellow and blue, and purple is made of blue and red!",
+            text: "<b>Colors:</b> Primary colors are Red, Yellow, and Blue. Mixing them creates every other color! Secondary colors in art are orange, green and purple! Orange is made of red and yellow, green is made of yellow and blue, and purple is made of blue and red!",
             buttons: [{ text: "🔄 Back to Main", action: "main" }]
         },
         bible: {
@@ -168,20 +168,26 @@
             text: "Math is super helpful for coding games! What level are we working on?",
             buttons: [{ text: "📐 Pre-Algebra", action: "prealgebra" }, { text: "➕ Basic Operations", action: "basicmath" }]
         },
-        prealgebra: {
-    text: "<b>Pre-Algebra:</b> Introduces variables (like x and y), integers, and basic linear equations. Can you solve this? X + 7 = 14 + 2",
-    buttons: [
-        { text: "X = 9", action: "correct_answer" },
-        { text: "X = 23", action: "wrong_answer" },
-        { text: "🔄 Back to Main", action: "main" }
-    ]
-}        basicmath: {
-            text: "<b>Basic Number Operations:</b> Addition (+), Subtraction (-), Multiplication (×), and Division (÷). Computer logic completely relies on these rules! These are essential! I am currently working on a math helper tool! When I am done, you can get some help with these things! But for now, would you like to answer a few questions about this topic? (yes or no)",
+                prealgebra: {
+            text: "<b>Pre-Algebra:</b> Introduces variables (like x and y), integers, and basic linear equations. Can you solve this? X + 7 = 14 + 2",
             buttons: [
-                { text: "👍 Yes", action: "start_addition" },
-                { text: "👎 No", action: "main" }
+                { text: "X = 9", action: "correct_answer" },
+                { text: "X = 23", action: "wrong_answer" },
+                { text: "🔄 Back to Main", action: "main" }
             ]
         },
+        correct_answer: {
+            text: "🎉 <b>Correct!</b> 14 + 2 = 16. Subtracting 7 from both sides gives you X = 9! Fantastic job!",
+            buttons: [{ text: "🔄 Back to Main Menu", action: "main" }]
+        },
+        wrong_answer: {
+            text: "❌ <b>Not quite!</b> Let's simplify: X + 7 = 16. Subtract 7 from both sides to find X. Try again!",
+            buttons: [
+                { text: "📐 Try Again", action: "prealgebra" },
+                { text: "🔄 Back to Main Menu", action: "main" }
+            ]
+        },
+
 
         start_addition: {
             text: "<b>Addition Practice:</b> What is 12 + 7?",
@@ -220,9 +226,9 @@
             buttons: [
                 { text: "🔄 Back to Main Menu", action: "main" }
             ]
-        }
-                language: {
-            text: "<b>Language Learning:</b> Learning a new language opens up the world! Which language would you like to practice basic phrases in?",
+        },
+                        language: {
+            text: "<b>Language Learning:</b> Learning a new language can help you learn about the world! Which language would you like to practice basic phrases in?",
             buttons: [
                 { text: "🇪🇸 Spanish", action: "lang_spanish" },
                 { text: "🇩🇪 German", action: "lang_german" },
@@ -230,6 +236,7 @@
                 { text: "🔄 Back to Main", action: "main" }
             ]
         },
+
         lang_spanish: {
             text: "<b>🇪🇸 Basic Spanish Phrases:</b><br><br>👋 <b>Hello:</b> Hola<br>👋 <b>Goodbye:</b> Adiós<br>🗣️ <b>I don't speak Spanish:</b> No hablo español<br>🇬🇧 <b>Do you speak English?:</b> ¿Hablas inglés?<br>❓ <b>How are you?:</b> ¿Cómo estás?<br>👍 <b>Good:</b> Bien<br>👎 <b>Bad:</b> Mal",
             buttons: [{ text: "🔄 Back to Languages", action: "language" }, { text: "🔄 Main Menu", action: "main" }]
