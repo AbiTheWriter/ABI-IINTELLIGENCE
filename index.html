@@ -123,6 +123,7 @@
                 <button class="btn" onclick="selectTopic('colors')">🎨 Colors</button>
                 <button class="btn" onclick="selectTopic('bible')">📖 Bible & Jesus</button>
                 <button class="btn" onclick="selectTopic('math')">🧮 Math</button>
+                <button class="btn" onclick="selectTopic('language')">🌎 Language</button>
             </div>
         </div>
     </div>
@@ -148,7 +149,7 @@
             buttons: [{ text: "🔄 Back to Main", action: "main" }]
         },
         colors: {
-            text: "<b>Colors:</b> Primary colors are Red, Yellow, and Blue. Mixing them creates every other color in art and digital games!",
+            text: "<b>Colors:</b> Primary colors are Red, Yellow, and Blue. Mixing them creates every other color! Secondary coors in art are orange, green and purple! Orange is made of red and yellow, green is made of yellow and blue, and purple is made of blue and red!",
             buttons: [{ text: "🔄 Back to Main", action: "main" }]
         },
         bible: {
@@ -156,11 +157,11 @@
             buttons: [{ text: "📜 3 Important Verses", action: "verses" }, { text: "🙏 Basics of Christianity", action: "basics" }]
         },
         verses: {
-            text: "<b>3 Important Verses:</b><br><br>1. <b>John 3:16</b> - For God so loved the world...<br>2. <b>Philippians 4:13</b> - I can do all things through Christ...<br>3. <b>Genesis 1:1</b> - In the beginning, God created the heavens and the earth.",
+            text: "<b>3 Important Verses:</b><br><br>1. <b>John 3:16</b> - For God so loved the world, He gave his only begotten Son, for that whosoever believeth in him shall not perish, but have everlasting life <br>2. <b>Philippians 4:13</b> - I can do all things through Christ...<br>3. <b>Genesis 1:1</b> - In the beginning, God created the heavens and the earth.",
             buttons: [{ text: "🔄 Back to Main", action: "main" }]
         },
         basics: {
-            text: "<b>Basics of Christianity:</b> It centers on faith in Jesus Christ as the Son of God, following His teachings of love and forgiveness, and studying the Bible.",
+            text: "<b>Basics of Christianity:</b> It centers on faith in Jesus Christ as the Son of God, following His teachings of love and forgiveness, and studying the Bible. If you are intrested ( I am genuinly happy if you are, I am about to wrok on a game to learn about God! I will finish it after I do my math helper tool!) you caan find a church in your area! ",
             buttons: [{ text: "🔄 Back to Main", action: "main" }]
         },
         math: {
@@ -168,14 +169,81 @@
             buttons: [{ text: "📐 Pre-Algebra", action: "prealgebra" }, { text: "➕ Basic Operations", action: "basicmath" }]
         },
         prealgebra: {
-            text: "<b>Pre-Algebra:</b> Introduces variables (like x and y), integers, and basic linear equations. Perfect for practicing game variables!",
-            buttons: [{ text: "🔄 Back to Main", action: "main" }]
+    text: "<b>Pre-Algebra:</b> Introduces variables (like x and y), integers, and basic linear equations. Can you solve this? X + 7 = 14 + 2",
+    buttons: [
+        { text: "X = 9", action: "correct_answer" },
+        { text: "X = 23", action: "wrong_answer" },
+        { text: "🔄 Back to Main", action: "main" }
+    ]
+}        basicmath: {
+            text: "<b>Basic Number Operations:</b> Addition (+), Subtraction (-), Multiplication (×), and Division (÷). Computer logic completely relies on these rules! These are essential! I am currently working on a math helper tool! When I am done, you can get some help with these things! But for now, would you like to answer a few questions about this topic? (yes or no)",
+            buttons: [
+                { text: "👍 Yes", action: "start_addition" },
+                { text: "👎 No", action: "main" }
+            ]
         },
-        basicmath: {
-            text: "<b>Basic Number Operations:</b> Addition (+), Subtraction (-), Multiplication (×), and Division (÷). Computer logic completely relies on these rules!",
-            buttons: [{ text: "🔄 Back to Main", action: "main" }]
+
+        start_addition: {
+            text: "<b>Addition Practice:</b> What is 12 + 7?",
+            buttons: [
+                { text: "19", action: "start_subtraction" },
+                { text: "18", action: "start_addition" }
+            ]
+        },
+
+        start_subtraction: {
+            text: "🎉 <b>Correct!</b> Now for <b>Subtraction:</b> What is 20 - 8?",
+            buttons: [
+                { text: "12", action: "start_multiplication" },
+                { text: "14", action: "start_subtraction" }
+            ]
+        },
+
+        start_multiplication: {
+            text: "🎉 <b>Correct!</b> Now for <b>Multiplication:</b> What is 6 × 5?",
+            buttons: [
+                { text: "30", action: "start_division" },
+                { text: "25", action: "start_multiplication" }
+            ]
+        },
+
+        start_division: {
+            text: "🎉 <b>Correct!</b> Last one! <b>Division:</b> What is 16 ÷ 4?",
+            buttons: [
+                { text: "4", action: "correct_finish" },
+                { text: "3", action: "start_division" }
+            ]
+        },
+
+        correct_finish: {
+            text: "🏆 <b>Amazing job!</b> You beat all four basic operations questions!",
+            buttons: [
+                { text: "🔄 Back to Main Menu", action: "main" }
+            ]
         }
-    };
+                language: {
+            text: "<b>Language Learning:</b> Learning a new language opens up the world! Which language would you like to practice basic phrases in?",
+            buttons: [
+                { text: "🇪🇸 Spanish", action: "lang_spanish" },
+                { text: "🇩🇪 German", action: "lang_german" },
+                { text: "🇫🇷 French", action: "lang_french" },
+                { text: "🔄 Back to Main", action: "main" }
+            ]
+        },
+        lang_spanish: {
+            text: "<b>🇪🇸 Basic Spanish Phrases:</b><br><br>👋 <b>Hello:</b> Hola<br>👋 <b>Goodbye:</b> Adiós<br>🗣️ <b>I don't speak Spanish:</b> No hablo español<br>🇬🇧 <b>Do you speak English?:</b> ¿Hablas inglés?<br>❓ <b>How are you?:</b> ¿Cómo estás?<br>👍 <b>Good:</b> Bien<br>👎 <b>Bad:</b> Mal",
+            buttons: [{ text: "🔄 Back to Languages", action: "language" }, { text: "🔄 Main Menu", action: "main" }]
+        },
+        lang_german: {
+            text: "<b>🇩🇪 Basic German Phrases:</b><br><br>👋 <b>Hello:</b> Hallo<br>👋 <b>Goodbye:</b> Tschüss<br>🗣️ <b>I don't speak German:</b> Ich spreche kein Deutsch<br>🇬🇧 <b>Do you speak English?:</b> Sprechen Sie Englisch?<br>❓ <b>How are you?:</b> Wie geht es dir?<br>👍 <b>Good:</b> Gut<br>👎 <b>Bad:</b> Schlecht",
+            buttons: [{ text: "🔄 Back to Languages", action: "language" }, { text: "🔄 Main Menu", action: "main" }]
+        },
+        lang_french: {
+            text: "<b>🇫🇷 Basic French Phrases:</b><br><br>👋 <b>Hello:</b> Bonjour<br>👋 <b>Goodbye:</b> Au revoir<br>🗣️ <b>I don't speak French:</b> Je ne parle pas français<br>🇬🇧 <b>Do you speak English?:</b> Parlez-vous anglais?<br>❓ <b>How are you?:</b> Comment ça va?<br>👍 <b>Good:</b> Bien<br>👎 <b>Bad:</b> Mal",
+            buttons: [{ text: "🔄 Back to Languages", action: "language" }, { text: "🔄 Main Menu", action: "main" }]
+        },
+
+
 
     function selectTopic(topicKey) {
         addMessage(topicKey.toUpperCase(), 'user-msg');
